@@ -1,0 +1,11 @@
+  539  helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+  540  help repo list
+  541  helm repo list
+  542  helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner     --set nfs.server=192.168.2.136     --set nfs.path=/data/nfs
+  543  k get deply
+  544  k get deploy
+  545  k get pod
+  546  k get sc
+  547  kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+  548  k get sc
+  549  kubectl apply -f test-dynamic-claim.yaml
