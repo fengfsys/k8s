@@ -1,1 +1,11 @@
-
+cat Dyn-PVC-install.txt
+  539  helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+        helm repo update
+  766  helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner     --set nfs.server=10.20.127.163     --set nfs.path=/mnt/repo/k8s
+  767  helm upgrade nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner     --set nfs.server=10.20.127.163     --set nfs.path=/mnt/repo/k8s
+  768  kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+  769  k get sc
+  770  kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+  771  k get sc
+  772  k get po
+  773  k get po -A
